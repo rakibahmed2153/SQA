@@ -26,6 +26,8 @@ print(drive.title)
 """
 # locate the element
 search = drive.find_element("name", "s")
+# Clear the input box
+drive.clear()
 # type valiable in the input box
 search.send_keys("test")
 # Click on the submit button to send
@@ -33,6 +35,7 @@ search.send_keys(Keys.RETURN)
 
 # Wait until the main is located
 try:
+    
     main = WebDriverWait(drive, 100).until(
        EC.presence_of_element_located((By.ID, "main"))
     )
