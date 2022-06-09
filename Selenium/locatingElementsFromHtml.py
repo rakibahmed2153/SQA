@@ -27,7 +27,7 @@ print(drive.title)
 # locate the element
 search = drive.find_element("name", "s")
 # Clear the input box
-drive.clear()
+search.clear()
 # type valiable in the input box
 search.send_keys("test")
 # Click on the submit button to send
